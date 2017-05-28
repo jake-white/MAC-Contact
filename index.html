@@ -1,13 +1,18 @@
 <!--MAC Sample Contact Page
     Author: Jake White
-    5/27/2017-->
+    5/27/2017
+    Validates user input, gives error messages, and displays output at bottom of page-->
 
 
 <!DOCTYPE html>
 <html lang="en">
     <head>
         <meta charset="UTF-8" />
+        <script type="text/javascript" src="jquery-3.2.1.min.js"></script>
         <link rel="stylesheet" type="text/css" href="style.css">
+        <script src="https://cdn.jsdelivr.net/jquery.validation/1.16.0/jquery.validate.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/jquery.validation/1.16.0/additional-methods.min.js"></script>
+        <script type="text/javascript" src="output.js"></script>
     </head>
     <body>
         <div class="header"> 
@@ -16,15 +21,22 @@
         <!-- using Flex boxes for the double-column style -->
         <div class="container">
             <div class="forms">
-                <h3>*NAME</h3>
-                <input type="text" class="forminput">
-                <h3>*EMAIL</h3>
-                <input type="text" class="forminput">
-                <h3>PHONE #</h3>
-                <input type="text" class="forminput">
-                <h3>*MESSAGE</h3>
-                <textarea class="forminput"></textarea><br>
-                <input type="button" value="SUBMIT" class="submitbutton">
+                <form id="commentform">
+                    <label for="fname"><h3>*NAME</h3></label>
+                    <input name="fname" type="text" class="forminput" id="fname" required>
+                    <label for="femail"><h3>*EMAIL</h3></label>
+                    <input name="femail" type="email" class="forminput" id="femail" required>
+                    <label for="field"><h3>PHONE #</h3></label>
+                    <input name="fphone" class="forminput" id="fphone">
+                    <label for="fmessage"><h3>*MESSAGE</h3></label>
+                    <textarea name="fmessage" type="text" class="forminput" id="fmessage" required></textarea><br>
+                    <input type="submit" value="SUBMIT" id="submitbutton">
+                </form>
+                
+                <p id="nameOutput"></p>
+                <p id="emailOutput"></p>
+                <p id="phoneOutput"></p>
+                <p id="messageOutput"></p>
             </div>
 	        <div class="contacts">
                 <h1>MAC</h1>

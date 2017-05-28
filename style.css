@@ -1,7 +1,7 @@
 body {
     /*Constraining form to about half the page. Looks a bit better and closer to the source this way?
     Easily adjustable either way.*/
-    width: 50%;
+    width: 100%;
     font-family: 'Avenir Next LT Pro', sans-serif;
 }
 
@@ -12,6 +12,8 @@ body {
 
 
 .container {
+    margin-left: 10%;
+    margin-right: 10%;
     display: flex;
 }
 .forms {
@@ -20,6 +22,8 @@ body {
 }
 .contacts {
     margin: 10px;
+    margin-top: 10%;
+    font-weight: bold;
 }
 
 .forminput
@@ -33,27 +37,33 @@ body {
     border:none;
     background-color: #f1f1f1;
     padding:5px;
-    width: 70%;
+    width: 40%;
+}
+
+#messageInput {
+    width: 60%;
 }
 
 .forminput:focus { 
     outline: none;
     border:solid 1px black;
+    background-color: white;
 }
 
-.submitbutton {
+#submitbutton {
     outline: none;
     -moz-border-radius: 2em;
     -webkit-border-radius: 2em;
     border-radius: 2em;
     border: solid 1px #977377;
-    background-color: #ffffff;
+    background-color: white;
     font-weight: bold;
     width: 150px;
     height: 40px;
 }
 
 textarea {
+    resize: none;
     height: 40%;
 }
 
