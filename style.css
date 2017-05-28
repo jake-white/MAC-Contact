@@ -23,7 +23,6 @@ body {
 .contacts {
     margin: 10px;
     margin-top: 10%;
-    font-weight: bold;
 }
 
 .forminput
@@ -40,7 +39,8 @@ body {
     width: 40%;
 }
 
-#messageInput {
+#fmessage {
+    resize: none;
     width: 60%;
 }
 
@@ -51,6 +51,7 @@ body {
 }
 
 #submitbutton {
+    margin-top: 5%;
     outline: none;
     -moz-border-radius: 2em;
     -webkit-border-radius: 2em;
@@ -60,11 +61,6 @@ body {
     font-weight: bold;
     width: 150px;
     height: 40px;
-}
-
-textarea {
-    resize: none;
-    height: 40%;
 }
 
 
